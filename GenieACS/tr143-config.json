@@ -1,0 +1,19 @@
+{
+    "TR-143": {
+      "enabled": true,
+      "downloadDiagnostic": {
+        "interface": "eth0",
+        "maxDownloadSize": 104857600,
+        "downloadURL": "http://localhost:8080/testfile"
+      },
+      "uploadDiagnostic": {
+        "interface": "eth0", 
+        "maxUploadSize": 104857600,
+        "uploadURL": "http://localhost:8080/upload"
+      }
+    },
+    "logging": {
+      "level": "info",
+      "format": "json"
+    }
+  }

@@ -15,8 +15,8 @@ WORKDIR /
 
 # Install necessary packages
 RUN yum -y install \
-    vim \
-    git \
+#    vim \
+#    git \
     curl
 
 # Install Apache HTTP Server
@@ -28,10 +28,10 @@ COPY httpd.conf /etc/httpd/conf/httpd.conf
 COPY 00-dav.conf /etc/httpd/conf.modules.d/00-dav.conf
 
 # Enable Apache HTTP Server to start on boot
-RUN systemctl enable httpd
+#RUN systemctl enable httpd
 
 # Expose port 80
 EXPOSE 80
 
 # Start Apache HTTP Server in the foreground
-CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+#CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
